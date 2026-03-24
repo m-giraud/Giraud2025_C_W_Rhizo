@@ -92,7 +92,7 @@ def XcGrowth(initsim, simMax,paramIndx_,spellData):
     weatherInit = weatherFunctions.weather(1.,dt, spellData)
        
     # directory where the results will be printed
-    results_dir="./results/"
+    results_dir="./results/"+str(spellData['scenario'])+"_"+str(paramIndx_)+"/"
     
     # to get printing directory/simulaiton type in the slurm.out file
     if rank == 0:
