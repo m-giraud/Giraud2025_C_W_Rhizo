@@ -92,13 +92,7 @@ def XcGrowth(initsim, simMax,paramIndx_,spellData):
     weatherInit = weatherFunctions.weather(1.,dt, spellData)
        
     # directory where the results will be printed
-    results_dir="./results/TraiRhizo/paperSc/NewSetup/1cm"+str(rsiCompMethod)+str(spellData['scenario'])\
-    +"_"+str(int(np.prod(soilTextureAndShape['cell_number'])))\
-                    +"_"+str(paramIndx_)\
-                    +"_"+str(int(initsim))+"to"+str(int(simMax))\
-                    +"_"+str(int(dt_inner_init*24*60))+"mn_"\
-                    +str(int((dt_inner_init*24*60 - int(dt_inner_init*24*60))*60))+"s_"\
-                    +str(max_rank)+"/"
+    results_dir="./results/"
     
     # to get printing directory/simulaiton type in the slurm.out file
     if rank == 0:
